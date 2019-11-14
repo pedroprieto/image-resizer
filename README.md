@@ -10,15 +10,21 @@ Está basado en [este proyecto de ejemplo de ClaudiaJS](https://github.com/claud
 # Instalación
 1. Instalar [Node](https://nodejs.org/es/)
 2. Instalar [Claudia](https://claudiajs.com/) como paquete global: `npm install -g claudia`
-3. Crear un bucket en AWS S3 en la misma región en que se lanzará la función Lambda (por defecto, `eu-west-1`, Irlanda).
-4. Clonar el repositorio mediante `git clone`
-5. Acceder a la carpeta del repositorio `cd image-resizer`
-6. Instalar las dependencias mediante `npm install`
-7. Crear la función ejecutando `npm start`
-8. Ejecutar `claudia add-s3-event-source --bucket NOMBRE_BUCKET --prefix in/` para conectar los eventos que se produzcan en el bucket con la función Lambda (reemplazar `NOMBRE_BUCKET` por el nombre del bucket creado)
-9. Subir una imagen al bucket dentro de la carpeta `in/`
-10. Comprobar que se genera automáticamente una copia de la imagen redimensionada en la carpeta `out/` del mismo bucket
-11. Si se desea hacer cambios en la función y publicarlos en Lambda se deberá ejecutar `npm run deploy`
+3. Crear un usuario de IAM con las siguientes características:
+  - Tipo: **Acceso mediante programación**. 
+  - Permisos: **Asociar directamente a las políticas existente**
+    - `AWSLambdaFullAccess`
+    - `IAMFullAccess`
+4. Descargar la clave de acceso y la clave secreta y almacenarlas en el archivo `.aws/credentials` dentro de la carpeta de usuario en el equipo local
+5. Crear un bucket en AWS S3 en la misma región en que se lanzará la función Lambda (por defecto, `eu-west-1`, Irlanda).
+6. Clonar el repositorio mediante `git clone`
+7. Acceder a la carpeta del repositorio `cd image-resizer`
+8. Instalar las dependencias mediante `npm install`
+9. Crear la función ejecutando `npm start`
+10. Ejecutar `claudia add-s3-event-source --bucket NOMBRE_BUCKET --prefix in/` para conectar los eventos que se produzcan en el bucket con la función Lambda (reemplazar `NOMBRE_BUCKET` por el nombre del bucket creado)
+11. Subir una imagen al bucket dentro de la carpeta `in/`
+12. Comprobar que se genera automáticamente una copia de la imagen redimensionada en la carpeta `out/` del mismo bucket
+13. Si se desea hacer cambios en la función y publicarlos en Lambda se deberá ejecutar `npm run deploy`
 
 # Funcionamiento
 Puedes ver el procedimiento de despliegue de la aplicación en este tutorial en Youtube:
