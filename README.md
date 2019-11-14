@@ -25,6 +25,10 @@ Está basado en [este proyecto de ejemplo de ClaudiaJS](https://github.com/claud
 11. Subir una imagen al bucket dentro de la carpeta `in/`
 12. Comprobar que se genera automáticamente una copia de la imagen redimensionada en la carpeta `out/` del mismo bucket
 13. Si se desea hacer cambios en la función y publicarlos en Lambda se deberá ejecutar `npm run deploy`
+14. Por último, realizar la **limpieza de los recursos utilizados**. Se debe eliminar:
+    - La función Lambda
+    - El rol `image-resizer-executor` en IAM
+    - El bucket en S3
 
 # Funcionamiento
 Puedes ver el procedimiento de despliegue de la aplicación en este tutorial en Youtube:
