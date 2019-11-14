@@ -21,6 +21,7 @@ Está basado en [este proyecto de ejemplo de ClaudiaJS](https://github.com/claud
 11. Si se desea hacer cambios en la función y publicarlos en Lambda se deberá ejecutar `npm run deploy`
 
 # Funcionamiento
+Puedes ver el procedimiento de despliegue de la aplicación en este tutorial en Youtube:
 [![Tutorial en Youtube](https://img.youtube.com/vi/xLQ8BhsB9fU/0.jpg)](https://www.youtube.com/watch?v=xLQ8BhsB9fU)
 
 ## Archivo `package.json`
