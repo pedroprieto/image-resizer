@@ -5,6 +5,8 @@ Utiliza [Claudia](https://claudiajs.com/) para automatizar la activación de eve
 
 La función se ejecuta cuando se sube una imagen a la carpeta `in/` del bucket. Una vez subido el archivo, se redimensiona con un tamaño de 300x300px y se guarda el resultado en la carpeta `out` del mismo bucket.
 
+Está basado en [este proyecto de ejemplo de ClaudiaJS](https://github.com/claudiajs/example-projects/tree/master/s3-file-processing).
+
 # Instalación
 1. Instalar [Node](https://nodejs.org/es/)
 2. Instalar [Claudia](https://claudiajs.com/) como paquete global: `npm install -g claudia`
