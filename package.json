@@ -1,0 +1,21 @@
+{
+  "name": "image-resizer",
+  "description": "Image resizer",
+  "version": "1.0.0",
+  "private": true,
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "start": "claudia create --name image-resizer --region eu-west-1 --handler main.handler --timeout 10",
+    "test": "claudia test-lambda",
+    "deploy": "claudia update"
+  },
+  "devDependencies": {
+    "claudia": "^5.9.1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.571.0",
+    "jimp": "^0.8.5"
+  }
+}
