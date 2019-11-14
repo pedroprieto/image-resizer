@@ -12,7 +12,7 @@ Está basado en [este proyecto de ejemplo de ClaudiaJS](https://github.com/claud
 2. Instalar [Claudia](https://claudiajs.com/) como paquete global: `npm install -g claudia`
 3. Crear un usuario de IAM con las siguientes características:
     - Tipo: **Acceso mediante programación**. 
-    - Permisos: **Asociar directamente a las políticas existente**
+    - Permisos: **Asociar directamente a las políticas existentes**
         - `AWSLambdaFullAccess`
         - `IAMFullAccess`
 4. Descargar la clave de acceso y la clave secreta y almacenarlas en el archivo `.aws/credentials` dentro de la carpeta de usuario en el equipo local
