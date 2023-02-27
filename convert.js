@@ -2,7 +2,7 @@
 // Jimp para editar las imágenes
 var jimp = require('jimp');
 // AWS SDK para conectar a S3
-import { s3 } from "@aws-sdk/client-s3"
+const { s3 } = require("@aws-sdk/client-s3");
 
 // Función de conversión de imágenes:
 // - Recibe un nombre de bucket y el nombre de la imagen subida a dicho bucket
